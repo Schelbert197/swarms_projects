@@ -1,0 +1,14 @@
+/swarm_simulation/sim_pkg/__pycache__/
+__pycache__/
+*.csv
+*.log
+*.pyc
+*.txt
+functiontrace*
+*log*
+*pyo
+*.txt
+*.ttf
+*user*
+time_csv.py
+.vscode/
