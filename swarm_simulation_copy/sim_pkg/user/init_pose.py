@@ -71,15 +71,15 @@ def init(swarmsize, x, y, theta, a_ids):
 
 #     return x, y, theta, a_ids
 
-# def init(swarmsize, x, y, theta, a_ids):
-#     import math
-#     import random
+def init(swarmsize, x, y, theta, a_ids):
+    import math
+    import random
     
-#     for i in range(swarmsize):
-#         x[i] = random.uniform(-4, 4) 
-#         y[i] = random.uniform(-4, 4) 
-#         a_ids[i] = 0
-#         theta[i] = random.uniform(-math.pi, math.pi)
+    for i in range(swarmsize):
+        x[i] = random.uniform(-4, 4) 
+        y[i] = random.uniform(-4, 4) 
+        a_ids[i] = i
+        theta[i] = random.uniform(-math.pi, math.pi)
 
 
 
@@ -135,26 +135,27 @@ def init(swarmsize, x, y, theta, a_ids):
             a_ids[i]=2
     pass
 '''
-def init(swarmsize, x, y, theta, a_ids):
-    import math
-    spacey=0.5
+# def init(swarmsize, x, y, theta, a_ids):
+#     # Init for brazil nut
+#     import math
+#     spacey=0.5
 
-    spacex=0.5
-    import random
-    for i in range(swarmsize):
-        y[i] = (i % 10 ) * spacey-5*spacey
-        x[i] = math.floor(i / 10 ) * spacex-5*spacex
-        if x[i] == 0 and y[i] == 0:
-            x[i] = 0.002
-        a_ids[i] = 0
-        theta[i] = 0
-        if i%3 == 0:
-            a_ids[i]=0
-        elif i%3 == 1:
-            a_ids[i]=1
-        else:
-            a_ids[i]=2
+#     spacex=0.5
+#     import random
+#     for i in range(swarmsize):
+#         y[i] = (i % 10 ) * spacey-5*spacey
+#         x[i] = math.floor(i / 10 ) * spacex-5*spacex
+#         if x[i] == 0 and y[i] == 0:
+#             x[i] = 0.002
+#         a_ids[i] = 0
+#         theta[i] = 0
+#         if i%3 == 0:
+#             a_ids[i]=0
+#         elif i%3 == 1:
+#             a_ids[i]=1
+#         else:
+#             a_ids[i]=2
 
 
 
-    return x, y, theta, a_ids
+#     return x, y, theta, a_ids
