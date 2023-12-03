@@ -4,12 +4,30 @@ def usr(robot):
     import math
     from random import uniform
     import numpy as np
+    import modern_robotics
 
     # adding a commment
     rep_avg = 5
-    velocity = 5
+    velocities = [10,10]
+    motor_full_speed = 180 #rpm -100,100 set vel
+    set_vel_to_rads = (9/5) * (np.pi/60)
+    half_radius_of_wheel = 0.0075
+    wheel_rad = 2*half_radius_of_wheel
+    dist_between_wheel = 0.08
     while True:
-        # TODO calculate w, calculate v, average values from each robot, 
+        # TODO calculate w, calculate v, average values from e# ach robot, 
+        # wheel set vel in rpm = 9/5
+        # wheel rad/s = rpm * (1/60) * (2pirad/rev)
+        # wheel rad/s = (9/5) * (2pi/60) * set vel
+
+        F = np.array([[-1/dist_between_wheel, 1/dist_between_wheel],
+                      [0.5, 0.5]
+                      [0.0,0.0]])
+        
+        V_twist = F@velocities
+
+        
+        
         robot.delay(10)
         pose_t = robot.get_pose()
             # if there is a new postion sensor update, print out and transmit the info
@@ -25,3 +43,9 @@ def usr(robot):
         msgs = robot.recv_msg()
         if len(msgs) > 0:
             pose_rxed = struct.unpack('ffi', msgs[0][:12])
+
+            # collect positions of all robots and get cohesion vector
+
+            # Average velocity vec of all robots
+
+            # Normalized repulsion vector of each robot from dist 
