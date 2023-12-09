@@ -39,10 +39,10 @@ def init(swarmsize, x, y, theta, a_ids):
 # def init(swarmsize, x, y, theta, a_ids):
 #     import math
 #     import random
-    
+
 #     for i in range(swarmsize):
-#         x[i] = random.uniform(-4, 4) 
-#         y[i] = random.uniform(-4, 4) 
+#         x[i] = random.uniform(-4, 4)
+#         y[i] = random.uniform(-4, 4)
 #         a_ids[i] = i
 #         theta[i] = random.uniform(-math.pi, math.pi)
 #         if i%3==0:
@@ -54,19 +54,20 @@ def init(swarmsize, x, y, theta, a_ids):
 
 #     return x, y, theta, a_ids
 
+
 # def init(swarmsize, x, y, theta, a_ids):
 #     import math
 #     import random
-    
+
 #     for i in range(swarmsize):
-#         x[i] = random.uniform(-4, 4) 
-#         y[i] = random.uniform(-4, 4) 
+#         x[i] = random.uniform(-4, 4)
+#         y[i] = random.uniform(-4, 4)
 #         a_ids[i] = i
 #         theta[i] = random.uniform(-math.pi, math.pi)
-#         if i%2==0:
-#             a_ids[i]=0
+#         if i % 2 == 0:
+#             a_ids[i] = 0
 #         else:
-#             a_ids[i]=1
+#             a_ids[i] = 1
 
 
 #     return x, y, theta, a_ids
@@ -74,17 +75,15 @@ def init(swarmsize, x, y, theta, a_ids):
 def init(swarmsize, x, y, theta, a_ids):
     import math
     import random
-    
+
     for i in range(swarmsize):
-        x[i] = random.uniform(-4, 4) 
-        y[i] = random.uniform(-4, 4) 
+        x[i] = random.uniform(-4, 4)
+        y[i] = random.uniform(-4, 4)
         a_ids[i] = i
         theta[i] = random.uniform(-math.pi, math.pi)
 
+    return x, y, theta, a_ids
 
-
-
-#     return x, y, theta, a_ids
 
 # def init(swarmsize, x, y, theta, a_ids):
 #     x[0] = 0
@@ -96,7 +95,6 @@ def init(swarmsize, x, y, theta, a_ids):
 #     theta[1] = 0
 #     a_ids[1]=1
 #     return x, y, theta, a_ids
-
 '''
 Firefly
 
@@ -155,7 +153,6 @@ def init(swarmsize, x, y, theta, a_ids):
 #             a_ids[i]=1
 #         else:
 #             a_ids[i]=2
-
 
 
 #     return x, y, theta, a_ids
